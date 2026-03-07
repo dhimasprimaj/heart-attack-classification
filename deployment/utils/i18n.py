@@ -1,9 +1,11 @@
 import json
 import streamlit as st
+from pathlib import Path
 
+BASE_DIR = Path(__file__).parent.parent
 @st.cache_data
 def load_translations():
-    with open("translations.json", encoding="utf-8") as f:
+    with open(BASE_DIR / "translations.json", encoding="utf-8") as f:
         return json.load(f)
     
 translations = load_translations()

@@ -10,12 +10,12 @@ st.set_page_config(
 )
 
 pg = st.navigation({
-    "Main": [
+    tr("main"): [
         st.Page("pages/index.py", title=tr("landing"), icon=":material/home:"),
         st.Page("pages/predict_new_model.py", title=tr("predict_new"), icon=":material/edit:"),
         st.Page("pages/predict_old_model.py", title=tr("predict_old"), icon=":material/edit:"),
     ],
-    "About": [
+    tr("about"): [
         st.Page("pages/about_new_model.py", title=tr("new_model"), icon=":material/smart_toy:"),
         st.Page("pages/about_old_model.py", title=tr("old_model"), icon=":material/smart_toy:"),
         st.Page("pages/team.py", title=tr("team"), icon=":material/diversity_1:"),
