@@ -1,6 +1,6 @@
 import pandas as pd
 
-def preprocess_input(df, label_encoders, onehot_encoder, risk_encoder):
+def preprocess_input(df, label_encoders, onehot_encoder, risk_encoder=None):
     df = df.copy()
     
     # Label Encoding
@@ -27,12 +27,13 @@ def preprocess_input(df, label_encoders, onehot_encoder, risk_encoder):
     df = pd.concat([df, onehot_df], axis=1)
     
 #    Risk / Target Encoding
-    df["Country"] = df["Country"].fillna("Unknown")
+    if risk_encoder is not None:
+        df["Country"] = df["Country"].fillna("Unknown")
 
-    df["Country_risk_encoded"] = (
-        df["Country"].map(risk_encoder["mapping"])  # mapping per country
-        .fillna(risk_encoder["global_mean"])       # fallback global mean
-    )
+        df["Country_risk_encoded"] = (
+            df["Country"].map(risk_encoder["mapping"])  # mapping per country
+            .fillna(risk_encoder["global_mean"])       # fallback global mean
+        )
     
     # Drop kolom yang tidak dipakai
     df.drop(columns=["Blood Pressure", "Country"], inplace=True, errors="ignore")

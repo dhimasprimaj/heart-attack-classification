@@ -4,7 +4,7 @@ A machine learning project that predicts the likelihood of a heart attack based 
 
 ## Project Overview
 
-This project leverages machine learning techniques to build a predictive model for identifying individuals at risk of heart attack. The model is trained on a comprehensive dataset containing various health indicators and demographic information, then deployed as a web application using Flask for easy accessibility and user interaction.
+This project leverages machine learning techniques to build a predictive model for identifying individuals at risk of heart attack. The model is trained on a comprehensive dataset containing various health indicators and demographic information, then deployed as a web application using Streamlit for easy accessibility and user interaction.
 
 ## Dataset
 
@@ -96,10 +96,7 @@ This project uses publicly available data from Kaggle for educational purposes.
 ## Teams
 
 - Dhimas Primajaya
-- Dimas Tubagus Berlian
-- Dr. Elsye Maria Rosa
 - Jackson
 - Reynold Kunarto
 - Rijki Hardiyanti
-- Wadhifatur Rosyidah
 - Zufar Bagas P.

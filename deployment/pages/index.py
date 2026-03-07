@@ -1,25 +1,17 @@
 import streamlit as st
+from utils.i18n import tr
 
-st.title("🫀 :red[**Heart Attack**] Risk Prediction", text_alignment="center",anchor=False)
+st.title("🫀 "+tr("title"), text_alignment="center",anchor=False)
 
-st.subheader("Estimate heart attack risk using health indicators, lifestyle and machine learning", anchor=False)
+st.subheader(tr("index_title_desc"), anchor=False)
 
 st.warning(
-    "This tool is for educational purposes only and does not provide medical diagnosis."
+    tr("index_warning")
 )
 
-st.markdown("""
-### What does this app do?
-This application predicts heart attack risk based on basic health and lifestyle data.
-It is designed to increase awareness and encourage preventive care.
-""")
+st.markdown(tr("index_what"))
 
-st.markdown("""
-### How it works
-1. Enter your health and lifestyle data  
-2. Click **Submit**  
-3. View your estimated risk level
-""")
+st.markdown(tr("index_how"))
 
-if st.button("👉 Start Risk Assessment", width="stretch"):
-    st.switch_page("pages/predict.py")
+if st.button("👉 "+tr("index_button"), width="stretch"):
+    st.switch_page("pages/predict_new_model.py")
