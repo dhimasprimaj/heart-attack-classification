@@ -76,11 +76,11 @@ st.markdown(
 )
 
 st.header("📈 Model Performance")
-st.subheader("Logistic Regression")
+st.subheader("Random Forest")
 col1, col2, col3 = st.columns(3)
 
 with col1:
-    st.metric("ROC-AUC", "1.00")
+    st.metric("ROC-AUC", "~0.99")
 
 with col2:
     st.metric("Recall", "1.00")
